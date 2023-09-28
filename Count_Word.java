@@ -1,21 +1,20 @@
 import java.util.Scanner;
-public class  Count_Word {
+public class  Count_word {
+  
     public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner sc  = new Scanner(System.in);
         String sr;
-		char ch;
-		sr = sc.nextLine();
-		
-		for(int i = 0; i < sr.length(); i++){
-			ch = sr.charAt(i);
-			if(ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z' ) {
-				i++;
-			}
-			else{
-				System.out.println("worng input");
-			}
-			
-		}
-		System.out.println();
-	}
+        int count=1;
+        sr = sc.nextLine();
+        
+        for(int i = 0; i < sr.length(); i++){
+            
+            if(sr.charAt(i)==32 ) {
+                count++;
+            }
+            
+        }
+        System.out.println(count);
+    }
 }
